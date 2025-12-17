@@ -9,7 +9,13 @@
 
   <!-- 왼쪽 고정 사이드바 -->
   <aside class="sidebar">
-    <h2 class="logo">PORTFOLIO</h2>
+
+    <!-- 프로필 이미지 -->
+    <div class="profile">
+        <img src="images/profile.jpg" alt="서민형 프로필 이미지" />
+        <p class="profile-name">SeoMinHyeong</p>
+    </div>
+    
     <nav>
       <button data-target="home">Home</button>
       <button data-target="about">About</button>
@@ -22,35 +28,87 @@
 
   <!-- 메인 콘텐츠 -->
   <main class="content">
+
+    <!-- 홈 섹션 -->
     <section id="home" class="section">
       <h1>기본에 충실한 개발자 서민형</h1>
       <p>개발자 포트폴리오 메인 소개</p>
     </section>
 
+    <!-- 소개 섹션 -->
     <section id="about" class="section">
       <h1>About</h1>
       <p>나에 대한 설명</p>
     </section>
 
+    <!-- 기술 섹션 -->
     <section id="skills" class="section">
       <h1>Skills</h1>
       <p>기술 스택</p>
     </section>
 
+
+    <!-- 프로젝트 섹션 -->
     <section id="projects" class="section">
-      <h1>Projects</h1>
-      <p>프로젝트 소개</p>
+    <h1>Projects</h1>
+
+    <div class="project-list">
+        <!-- 프로젝트 카드 1 -->
+        <a
+        class="project-card"
+        href="https://example.com"
+        target="_blank"
+        rel="noopener noreferrer"
+        >
+        <div class="project-image">
+            <img src="images/roommind.png" alt="RoomMind 프로젝트 이미지" />
+        </div>
+
+        <div class="project-content">
+            <h2>RoomMind</h2>
+            <p>AI 기반 가구 추천 이커머스 플랫폼</p>
+            <div class="project-tags">
+            <span class="project-tag">Full Stack</span>
+            <span class="project-tag">AI</span>
+            </div>
+        </div>
+        </a>
+
+        <!-- 프로젝트 카드 2 -->
+        <a
+        class="project-card"
+        href="https://example.com"
+        target="_blank"
+        rel="noopener noreferrer"
+        >
+        <div class="project-image">
+            <img src="images/project2.png" alt="개인 프로젝트 이미지" />
+        </div>
+
+        <div class="project-content">
+            <h2>개인 프로젝트</h2>
+            <p>웹 기반 개인 프로젝트 설명</p>
+            <div class="project-tags">
+            <span class="project-tag">Web</span>
+            </div>
+        </div>
+        </a>
+    </div>
     </section>
 
+
+    <!-- education 섹션 -->
     <section id="experience" class="section">
       <h1>Education</h1>
       <p>경험 및 역할</p>
     </section>
 
+    <!-- contact 섹션 -->
     <section id="contact" class="section">
       <h1>Contact</h1>
       <p>연락처</p>
     </section>
+
   </main>
 
   <!-- Top 버튼 -->

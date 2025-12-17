@@ -8,7 +8,7 @@ body {
   font-family: "Pretendard", Arial, sans-serif;
   display: flex;
   background-color: rgb(255,250,240);
-  color: #e5e7eb;
+  color: black;
 }
 
 /* 사이드바 */
@@ -18,15 +18,9 @@ body {
   top: 0;
   width: 220px;
   height: 100vh;
-  background-color: #020617;
+  background-color: rgb(105,105,105);
   padding: 30px 20px;
-  border-right: 1px solid #1e293b;
-}
-
-.logo {
-  color: #38bdf8;
-  margin-bottom: 40px;
-  text-align: center;
+  
 }
 
 .sidebar nav {
@@ -49,6 +43,30 @@ body {
 .sidebar button:hover {
   color: #38bdf8;
 }
+
+/* 사이드바 프로필 */
+.profile {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 40px;
+}
+
+.profile img {
+  width: 150px;
+  height: 200px;
+  border-radius: 50%;         
+  object-fit: cover;           
+  
+  margin-bottom: 25px;
+}
+
+.profile-name {
+  font-size: 16px;
+  font-weight: bold;
+  color: #ffffff;
+}
+
 
 /* 메인 콘텐츠 */
 .content {
@@ -98,4 +116,52 @@ body {
 .top-button.show {
   opacity: 1;
   pointer-events: auto;
+}
+
+
+/* 프로젝트 리스트 */
+.project-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 24px;
+  margin-top: 40px;
+}
+
+/* 프로젝트 카드 */
+.project-card {
+  display: block;
+  border: 1px solid #1e293b;
+  border-radius: 12px;
+  padding: 24px;
+  text-decoration: none;
+  color: #e5e7eb;
+  transition: transform 0.3s, box-shadow 0.3s, border-color 0.3s;
+}
+
+.project-card h2 {
+  color: #38bdf8;
+  margin-bottom: 12px;
+}
+
+.project-card p {
+  font-size: 14px;
+  line-height: 1.6;
+  margin-bottom: 16px;
+  color: #cbd5f5;
+}
+
+.project-card:hover {
+  transform: translateY(-6px);
+  border-color: #38bdf8;
+  box-shadow: 0 10px 30px rgba(56, 189, 248, 0.15);
+}
+
+/* 태그 */
+.project-tag {
+  font-size: 12px;
+  padding: 4px 10px;
+  border-radius: 999px;
+  background-color: #0f172a;
+  border: 1px solid #1e293b;
+  color: #38bdf8;
 }
