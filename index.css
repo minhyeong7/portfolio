@@ -1,0 +1,101 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Pretendard", Arial, sans-serif;
+  display: flex;
+  background-color: rgb(239, 237, 237);
+  color: #e5e7eb;
+}
+
+/* 사이드바 */
+.sidebar {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 220px;
+  height: 100vh;
+  background-color: #020617;
+  padding: 30px 20px;
+  border-right: 1px solid #1e293b;
+}
+
+.logo {
+  color: #38bdf8;
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+.sidebar nav {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.sidebar button {
+  background: none;
+  border: none;
+  color: #cbd5f5;
+  font-size: 16px;
+  cursor: pointer;
+  text-align: left;
+  padding: 8px;
+  transition: color 0.2s;
+}
+
+.sidebar button:hover {
+  color: #38bdf8;
+}
+
+/* 메인 콘텐츠 */
+.content {
+  margin-left: 220px;
+  width: calc(100% - 220px);
+}
+
+.section {
+  min-height: 100vh;
+  padding: 80px 60px;
+  border-bottom: 1px solid #1e293b;
+}
+
+.section h1 {
+  font-size: 36px;
+  margin-bottom: 20px;
+  color: #38bdf8;
+}
+
+
+/* Top 버튼 */
+.top-button {
+  position: fixed;
+  right: 30px;
+  bottom: 30px;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  border: none;
+  background-color: #38bdf8;
+  color: #020617;
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(56, 189, 248, 0.4);
+
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s, transform 0.3s;
+}
+
+.top-button:hover {
+  transform: translateY(-4px);
+}
+
+/* 보일 때 */
+.top-button.show {
+  opacity: 1;
+  pointer-events: auto;
+}
