@@ -7,7 +7,7 @@
 body {
   font-family: "Pretendard", Arial, sans-serif;
   display: flex;
-  background-color: rgb(239, 237, 237);
+  background-color: rgb(255,250,240);
   color: #e5e7eb;
 }
 
@@ -65,7 +65,7 @@ body {
 .section h1 {
   font-size: 36px;
   margin-bottom: 20px;
-  color: #38bdf8;
+  color: rgb(119,119,119);
 }
 
 
