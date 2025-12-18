@@ -11,7 +11,7 @@ body {
   color: black;
 }
 
-/* 사이드바 */
+/* ----- 사이드바 ----- */
 .sidebar {
   position: fixed;
   left: 0;
@@ -53,8 +53,8 @@ body {
 }
 
 .profile img {
-  width: 150px;
-  height: 200px;
+  width: 130px;
+  height: 180px;
   border-radius: 50%;         
   object-fit: cover;           
   
@@ -87,7 +87,7 @@ body {
 }
 
 
-/* Top 버튼 */
+/* ----- Top 버튼 ----- */
 .top-button {
   position: fixed;
   right: 30px;
@@ -119,7 +119,66 @@ body {
 }
 
 
-/* 프로젝트 리스트 */
+
+/* ----- Skills ----- 섹션 */
+.skills-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.skills-grid {
+  margin-top: 40px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 24px;
+}
+
+/* 스킬 카드 */
+.skill-card {
+  padding: 24px;
+}
+
+.skill-card h2 {
+  font-size: 25px;
+  margin-bottom: 16px;
+  color: #555;
+}
+
+/* 스킬 리스트 */
+.skill-list {
+  list-style: none;
+}
+
+.skill-list li {
+  padding: 6px 0;
+}
+
+
+/* 스킬 아이템 */
+.skill-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 6px 0;
+}
+
+/* 아이콘 자리 */
+.skill-icon img{
+  width: 30px;
+  height: 30px;
+  flex-shrink: 0;
+}
+
+/* 스킬 텍스트 */
+.skill-name {
+  font-size: 18px;
+  color: #333;
+}
+
+
+
+/* ----- 프로젝트 섹션 ----- */
 .project-list {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -165,3 +224,133 @@ body {
   border: 1px solid #1e293b;
   color: #38bdf8;
 }
+
+
+
+/* ----- Education 섹션 ----- */
+.education-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.education-list {
+  margin-top: 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+/* 교육 카드 */
+.education-card {
+  display: flex;
+  gap: 24px;
+  padding: 28px;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+/* 마지막 카드는 보더 제거 */
+.education-card:last-child {
+  border-bottom: none;
+}
+
+/* 기간 */
+.education-period {
+  min-width: 140px;
+  font-weight: 600;
+  color: #38bdf8;
+}
+
+/* 내용 */
+.education-content h2 {
+  font-size: 20px;
+  margin-bottom: 6px;
+  color: #111;
+}
+
+.education-org {
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 14px;
+}
+
+/* 세부 내용 */
+.education-detail {
+  padding-left: 18px;
+  margin-bottom: 16px;
+}
+
+.education-detail li {
+  font-size: 14px;
+  color: #333;
+  margin-bottom: 6px;
+}
+
+/* 상태 뱃지 */
+.education-status {
+  display: inline-block;
+  padding: 4px 12px;
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 600;
+  background-color: #e0f2fe;
+  color: #0284c7;
+}
+
+
+
+
+
+
+
+
+/* ----- Contact 섹션 ----- */
+.contact-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.contact-box {
+  max-width: 520px;
+  margin-top: 40px;
+  padding: 32px;
+  background-color: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+}
+
+/* 개별 항목 */
+.contact-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 14px 0;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.contact-item:last-child {
+  border-bottom: none;
+}
+
+.contact-label {
+  font-weight: 600;
+  color: #555;
+}
+
+.contact-value {
+  font-weight: 500;
+  color: #111;
+}
+
+/* 링크 */
+.contact-link {
+  font-weight: 600;
+  color: #38bdf8;
+  text-decoration: none;
+}
+
+.contact-link:hover {
+  text-decoration: underline;
+}
+
