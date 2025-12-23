@@ -76,7 +76,6 @@ body {
 
 .section {
   min-height: 100vh;
-  padding: 80px 60px;
   border-bottom: 1px solid #e5e7eb;
 }
 
@@ -121,12 +120,12 @@ body {
 
 
 /* ----- Skills ----- 섹션 */
-.skills-section {
+#skills {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: 60px 0;
 }
+
 
 #skills h1{
   font-size: 36px;
@@ -188,7 +187,9 @@ body {
    Projects Section
 ========================= */
 #projects {
-  padding: 60px 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 #projects h1 {
@@ -312,6 +313,7 @@ body {
   display: grid;
   grid-template-columns: repeat(2, 1fr); /* 가로 2 */
   gap: 32px;
+  padding: 0 24px;
 }
 
 /* ----- 교육 카드 ----- */
@@ -326,7 +328,7 @@ body {
 
 /* ----- 기간 ----- */
 .education-period {
-  margin-top: 7px;
+  margin-top: 8px;
   min-width: 140px;
   font-weight: 600;
   color: #38bdf8;
