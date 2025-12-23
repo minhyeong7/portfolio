@@ -79,6 +79,10 @@ body {
   border-bottom: 1px solid #e5e7eb;
 }
 
+.section:last-of-type {
+  border-bottom: none;
+}
+
 .section h1 {
   font-size: 36px;
   margin-bottom: 20px;
@@ -115,6 +119,89 @@ body {
 .top-button.show {
   opacity: 1;
   pointer-events: auto;
+}
+
+/* ----- Home ----- 섹션 */
+#home{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#home h1{
+  font-size: 50px;
+  color: navy;
+}
+
+.resume-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 20px;
+  background-color: #16a34a;
+  color: white;
+  font-weight: 600;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: background-color 0.2s ease;
+  margin-top: 3rem;
+}
+
+.resume-btn:hover {
+  background-color: #15803d;
+}
+
+/* ----- About Section ----- */
+.about-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* 소개 문장 */
+.about-intro {
+  margin: 24px auto 60px;
+  max-width: 720px;
+  text-align: center;
+  font-size: 16px;
+  line-height: 1.7;
+  color: #444;
+}
+
+/* 카드 영역 */
+.about-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 32px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+/* 카드 공통 */
+.about-card {
+  padding: 28px;
+  border: 1px solid #e5e7eb;
+  border-radius: 16px;
+  background-color: #fafafa;
+}
+
+/* 카드 제목 */
+.about-card h2 {
+  font-size: 20px;
+  margin-bottom: 16px;
+}
+
+/* 리스트 */
+.about-card ul {
+  list-style: none;
+  padding: 0;
+}
+
+.about-card li {
+  font-size: 15px;
+  line-height: 1.6;
+  color: #333;
 }
 
 
@@ -204,7 +291,6 @@ body {
   width: 100%;
   height: 400px;
   align-items: center;
-  background-color: white;
 }
 
 .carousel-container {
@@ -224,6 +310,7 @@ body {
   height: 400px;
   flex-shrink: 0; 
   border-radius: 16px;
+  background-color: white;
 }
 
 /* 이미지 영역 */
@@ -264,11 +351,6 @@ body {
   color: #9ca3af;
 }
 
-.project-desc {
-  font-size: 14px;
-  line-height: 1.4;
-  
-}
 
 
 /* 좌우 버튼 */
@@ -382,10 +464,11 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: center; 
 }
 
 .contact-box {
-  max-width: 520px;
+  width: 400px;
   margin-top: 40px;
   padding: 32px;
   background-color: #ffffff;
@@ -420,10 +503,16 @@ body {
 .contact-link {
   font-weight: 600;
   color: #38bdf8;
-  text-decoration: none;
+  
 }
 
-.contact-link:hover {
-  text-decoration: underline;
+.right{
+  text-align: end;
+  margin-right: 8rem;
 }
+
+
+
+
+
 
