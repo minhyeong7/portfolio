@@ -159,12 +159,18 @@ body {
   justify-content: center;
 }
 
+.about-section h1{
+  font-size: 36px;
+  text-align: center;
+  margin-bottom: 60px;
+}
+
 /* 소개 문장 */
 .about-intro {
   margin: 24px auto 60px;
   max-width: 720px;
   text-align: center;
-  font-size: 16px;
+  font-size: 20px;
   line-height: 1.7;
   color: #444;
 }
@@ -293,6 +299,7 @@ body {
   align-items: center;
 }
 
+
 .carousel-container {
   width: 1180px;  /* 카드 넓이 3개 + gap 2개 */
   overflow: hidden;
@@ -315,10 +322,28 @@ body {
 
 /* 이미지 영역 */
 .project-image {
+  position: relative;
   display: block;
-  width: 100%;
-  height: 200px;
+  height: 180px;
   overflow: hidden;
+}
+
+
+.project-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(2, 6, 23, 0.65);
+  color: #e5e7eb;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.project-image:hover .project-overlay {
+  opacity: 0.8;
 }
 
 .project-image img {
@@ -349,6 +374,16 @@ body {
   font-size: 14px;
   line-height: 1.4;
   color: #9ca3af;
+}
+
+.project-desc{
+  font-size: 14px;
+}
+
+.project-role{
+  font-size: 14px;
+  list-style: none;
+  
 }
 
 

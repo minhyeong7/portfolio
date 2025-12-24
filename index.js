@@ -47,14 +47,14 @@ const totalCount = cards.length;
 let index = 0;
 const maxIndex = totalCount - visibleCount;
 
-// 👉 오른쪽 버튼
+//  오른쪽 버튼
 nextBtn.addEventListener('click', () => {
   if (index >= maxIndex) return;
   index++;
   track.style.transform = `translateX(-${index * cardWidth}px)`;
 });
 
-// 👉 왼쪽 버튼
+//  왼쪽 버튼
 prevBtn.addEventListener('click', () => {
   if (index <= 0) return;
   index--;
@@ -63,3 +63,32 @@ prevBtn.addEventListener('click', () => {
 
 
 
+const sections = document.querySelectorAll(".section");
+  let currentSection = 0;
+  let isScrolling = false;
+
+  window.addEventListener("wheel", (e) => {
+    if (isScrolling) return;
+
+    isScrolling = true;
+
+    if (e.deltaY > 0) {
+      // 아래로 스크롤
+      currentSection = Math.min(
+        currentSection + 1,
+        sections.length - 1
+      );
+    } else {
+      // 위로 스크롤
+      currentSection = Math.max(currentSection - 1, 0);
+    }
+
+    sections[currentSection].scrollIntoView({
+      behavior: "smooth",
+    });
+
+    // 스크롤 쿨타임
+    setTimeout(() => {
+      isScrolling = false;
+    }, 800);
+  }, { passive: false });

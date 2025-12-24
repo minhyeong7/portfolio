@@ -18,7 +18,7 @@
     
     <nav>
       <button data-target="home">Home</button>
-      <button data-target="about">About</button>
+      <button data-target="about">Introduction</button>
       <button data-target="skills">Skills</button>
       <button data-target="projects">Projects</button>
       <button data-target="education">Education</button>
@@ -32,7 +32,7 @@
     <!-- 홈 섹션 -->
     <section id="home" class="section">
       <h1>안녕하세요,<br> 풀스택 개발자 <br> <span style="color:green">서민형</span> 입니다.</h1>
-      <p>React와 Spring을 중심으로 프론트엔드와 백엔드를 개발합니다. <br> 함께 프로젝트를 만들고 성장할 수 있는 곳을 찾고 있습니다</p>
+      <p>React와 Spring을 중심으로 프론트엔드와 백엔드를 개발합니다. <br> 함께 프로젝트를 만들고 성장할 수 있는 곳을 찾고 있습니다.</p>
       <a href="./입사지원서-서민형.pdf" download class="resume-btn">
         이력서 다운로드
         <svg style="width: 20px; fill:white" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640">
@@ -43,42 +43,45 @@
     </section>
 
     <!-- 소개 섹션 -->
-<section id="about" class="section about-section">
-  
-
-  <!-- 한 줄 소개 -->
-  <p class="about-intro">
-    문제를 끝까지 파고드는 것을 좋아하는 풀스택 개발자입니다.<br>
-    프론트엔드와 백엔드를 넘나들며, 구조적인 코드와 안정적인 서비스를 만드는 것을 목표로 합니다.
-  </p>
-
-  <!-- 정보 카드 -->
-  <div class="about-cards">
+    <section id="about" class="section about-section">
     
-    <!-- 학력 카드 -->
-    <div class="about-card">
-      <h2>🎓 Education</h2>
-      <ul>
-        <li>
-          <strong>중부대학교</strong><br>
-          인공지능전공 (4년제)
-        </li>
-      </ul>
-    </div>
+      <h1>Introduction</h1>
+    
+      <!-- 한 줄 소개 -->
+      <p class="about-intro">
+        저는 <strong>불필요한 과정을 줄이고 효율을 높이는 것</strong>을 좋아하는 풀스택 개발자입니다.<br>
+        반복되는 문제를 구조로 해결하고, 유지보수 가능한 코드로 정리하는 과정에서 <br> 가장 큰 재미를 느낍니다.
+      </p>
 
-    <!-- 자격증 카드 -->
-    <div class="about-card">
-      <h2>📜 Certificates</h2>
-      <ul>
-        <li>정보처리기사</li>
-        <li>SQLD</li>
-        <li>리눅스마스터 2급</li>
-        <li>스마트홈관리사</li>
-      </ul>
-    </div>
-
-  </div>
-</section>
+    
+      
+      <div class="about-cards">
+    
+        
+        <div class="about-card">
+          <h2>Education</h2>
+          <ul>
+            <li>
+              <strong>중부대학교</strong><br>
+              인공지능전공 (4년제) <br>
+              4.15 / 4.5
+            </li>
+          </ul>
+        </div>
+    
+       
+        <div class="about-card">
+          <h2>Certificates</h2>
+          <ul>
+            <li>정보처리기사</li>
+            <li>SQLD</li>
+            <li>리눅스마스터 2급</li>
+            <li>지능형홈관리사</li>
+          </ul>
+        </div>
+    
+      </div>
+    </section>
 
 
 
@@ -251,59 +254,106 @@
         <div class="project-card">
           <a href="http://www.roommind.shop/" class="project-image" target="_blank">
             <img src="images/roommind.png" alt="프로젝트 썸네일">
+            <span class="project-overlay">사이트 바로가기 ↗</span>
           </a>
           <div class="project-content">
             <h3 class="project-title">RoomMind (4인 그룹프로젝트)</h3>
             <p class="project-period">기간: 2025.11 ~ 2025.12</p>
-            <p>기술스택: React, Spring, MySQL, Flask</p>
             <p class="project-desc">
-              설명: AI 기반 가구 추천 웹 서비스 
+              AI기반 가구추천 웹서비스 (React, Spring, MySQL, Flask)
             </p>
-            <p class="prject-role">역할: ERD 설계 및 데이터베이스, JWT 기반 회원가입·로그인 시스템 구현, AWS 배포 환경 구축 및 운영</p>
+            <p style="font-size: 14px;">내 역할:</p>
+            <ul class="project-role">
+              <li>ERD 설계 및 데이터베이스 구축</li>
+              <li>JWT 기반 회원가입 / 로그인 시스템 구현</li>
+              <li>주문 · 결제 · 장바구니 핵심 로직 개발</li>
+              <li>QnA 게시판 및 리뷰 CRUD 구현</li>
+              <li>AWS 배포 환경 구축 및 도메인 관리</li>
+            </ul>
           </div>
         </div>
         <div class="project-card">
            <a href="https://server-xdrc.onrender.com/" class="project-image" target="_blank">
             <img src="images/myboard.png" alt="프로젝트 썸네일">
+            <span class="project-overlay">사이트 바로가기 ↗</span>
           </a>
           <div class="project-content">
             <h3 class="project-title">MyBoard (개인 프로젝트)</h3>
+            <p class="project-period">기간: 2025.11 ~ 2025.12</p>
             <p class="project-desc">
               AI 기반 가구 추천 웹 서비스 (Spring,H2,Thymleaf)
             </p>
+            <p style="font-size: 14px;">내 역할:</p>
+            <ul class="project-role">
+              <li>ERD 설계 및 데이터베이스 구축</li>
+              <li>JWT 기반 회원가입 / 로그인 시스템 구현</li>
+              <li>주문 · 결제 · 장바구니 핵심 로직 개발</li>
+              <li>QnA 게시판 및 리뷰 CRUD 구현</li>
+              <li>AWS 배포 환경 구축 및 도메인 관리</li>
+            </ul>
           </div>
         </div>
         <div class="project-card">
            <a href="https://minhyeong7.github.io/mytube-app/" class="project-image" target="_blank">
             <img src="images/mytube.png" alt="프로젝트 썸네일">
+            <span class="project-overlay">사이트 바로가기 ↗</span>
           </a>
           <div class="project-content">
             <h3 class="project-title">Mytube (개인 프로젝트)</h3>
+            <p class="project-period">기간: 2025.11 ~ 2025.12</p>
             <p class="project-desc">
               AI 기반 가구 추천 웹 서비스 (React,Tailwindcss)
             </p>
+            <p style="font-size: 14px;">내 역할:</p>
+            <ul class="project-role">
+              <li>ERD 설계 및 데이터베이스 구축</li>
+              <li>JWT 기반 회원가입 / 로그인 시스템 구현</li>
+              <li>주문 · 결제 · 장바구니 핵심 로직 개발</li>
+              <li>QnA 게시판 및 리뷰 CRUD 구현</li>
+              <li>AWS 배포 환경 구축 및 도메인 관리</li>
+            </ul>
           </div>
         </div>
         <div class="project-card">
            <a href="https://minhyeong7.github.io/amazon/" class="project-image" target="_blank">
             <img src="images/amazon.png" alt="프로젝트 썸네일">
+            <span class="project-overlay">사이트 바로가기 ↗</span>
           </a>
           <div class="project-content">
             <h3 class="project-title">Amazon-App (개인 프로젝트)</h3>
+            <p class="project-period">기간: 2025.11 ~ 2025.12</p>
             <p class="project-desc">
               AI 기반 가구 추천 웹 서비스 (React,Tailwindcss)
             </p>
+            <p style="font-size: 14px;">내 역할:</p>
+            <ul class="project-role">
+              <li>ERD 설계 및 데이터베이스 구축</li>
+              <li>JWT 기반 회원가입 / 로그인 시스템 구현</li>
+              <li>주문 · 결제 · 장바구니 핵심 로직 개발</li>
+              <li>QnA 게시판 및 리뷰 CRUD 구현</li>
+              <li>AWS 배포 환경 구축 및 도메인 관리</li>
+            </ul>
           </div>
         </div>
         <div class="project-card">
            <a href="https://minhyeong7.github.io/todo-app/" class="project-image" target="_blank">
             <img src="images/todo.png" alt="프로젝트 썸네일">
+            <span class="project-overlay">사이트 바로가기 ↗</span>
           </a>
           <div class="project-content">
             <h3 class="project-title">Todo-App (개인 프로젝트) </h3>
+            <p class="project-period">기간: 2025.11 ~ 2025.12</p>
             <p class="project-desc">
               AI 기반 가구 추천 웹 서비스 (React,Tailwindcss)
             </p>
+            <p style="font-size: 14px;">내 역할:</p>
+            <ul class="project-role">
+              <li>ERD 설계 및 데이터베이스 구축</li>
+              <li>JWT 기반 회원가입 / 로그인 시스템 구현</li>
+              <li>주문 · 결제 · 장바구니 핵심 로직 개발</li>
+              <li>QnA 게시판 및 리뷰 CRUD 구현</li>
+              <li>AWS 배포 환경 구축 및 도메인 관리</li>
+            </ul>
           </div>
         </div>
       </div>
