@@ -63,32 +63,29 @@ prevBtn.addEventListener('click', () => {
 
 
 
-const sections = document.querySelectorAll(".section");
-  let currentSection = 0;
-  let isScrolling = false;
 
-  window.addEventListener("wheel", (e) => {
-    if (isScrolling) return;
 
-    isScrolling = true;
+const sections = document.querySelectorAll('section');
 
-    if (e.deltaY > 0) {
-      // 아래로 스크롤
-      currentSection = Math.min(
-        currentSection + 1,
-        sections.length - 1
-      );
-    } else {
-      // 위로 스크롤
-      currentSection = Math.max(currentSection - 1, 0);
-    }
+const observer = new IntersectionObserver(
+  (entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        const id = entry.target.id;
 
-    sections[currentSection].scrollIntoView({
-      behavior: "smooth",
+        buttons.forEach(btn => {
+          btn.classList.toggle(
+            'active',
+            btn.dataset.target === id
+          );
+        });
+      }
     });
+  },
+  {
+    threshold: 0.6   // 섹션 60% 보이면 활성화
+  }
+);
 
-    // 스크롤 쿨타임
-    setTimeout(() => {
-      isScrolling = false;
-    }, 800);
-  }, { passive: false });
+sections.forEach(section => observer.observe(section));
+

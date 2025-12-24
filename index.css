@@ -7,7 +7,7 @@
 body {
   font-family: "Pretendard", Arial, sans-serif;
   display: flex;
-  background-color: rgb(255,250,240);
+  background-color: #0F182A;
   color: black;
 }
 
@@ -18,7 +18,7 @@ body {
   top: 0;
   width: 220px;
   height: 100vh;
-  background-color: #888;
+  background-color: rgba(255, 255, 255, 0.1);
   padding: 30px 20px;
   
 }
@@ -32,7 +32,7 @@ body {
 .sidebar button {
   background: none;
   border: none;
-  color: #cbd5f5;
+  color: #FFFFFF99;
   font-size: 16px;
   cursor: pointer;
   text-align: left;
@@ -40,8 +40,16 @@ body {
   transition: color 0.2s;
 }
 
+
+.sidebar button.active {
+  background-color: #0F182A; 
+  color: #FFFFFF;
+  border-radius: 8px;
+}
+
+
 .sidebar button:hover {
-  color: #38bdf8;
+  color: #FFFFFF;
 }
 
 /* 사이드바 프로필 */
@@ -76,7 +84,7 @@ body {
 
 .section {
   min-height: 100vh;
-  border-bottom: 1px solid #e5e7eb;
+  border-bottom: 1px solid gray;
 }
 
 .section:last-of-type {
@@ -86,7 +94,7 @@ body {
 .section h1 {
   font-size: 36px;
   margin-bottom: 20px;
-  color: rgb(119,119,119);
+  color:#00D17D
 }
 
 
@@ -99,16 +107,13 @@ body {
   height: 48px;
   border-radius: 50%;
   border: none;
-  background-color: #f8ab38;
-  color: #020617;
+  background-color: #00D17D;
+  color: #FFFFFF;
   font-size: 18px;
   font-weight: bold;
   cursor: pointer;
   box-shadow: 0 4px 12px rgba(56, 189, 248, 0.4);
-
-  opacity: 0;
   pointer-events: none;
-  transition: opacity 0.3s, transform 0.3s;
 }
 
 .top-button:hover {
@@ -117,7 +122,6 @@ body {
 
 /* 보일 때 */
 .top-button.show {
-  opacity: 1;
   pointer-events: auto;
 }
 
@@ -131,7 +135,13 @@ body {
 
 #home h1{
   font-size: 50px;
-  color: navy;
+  color: #FFFFFF;
+}
+
+#home p{
+  margin-top: 3rem;
+  font-size: 18px;
+  color: #9CA3AF;
 }
 
 .resume-btn {
@@ -140,7 +150,7 @@ body {
   gap: 8px;
   padding: 10px 20px;
   background-color: #16a34a;
-  color: white;
+  color: #FFFFFF;
   font-weight: 600;
   border-radius: 8px;
   text-decoration: none;
@@ -172,7 +182,7 @@ body {
   text-align: center;
   font-size: 20px;
   line-height: 1.7;
-  color: #444;
+  color: #FFFFFF;
 }
 
 /* 카드 영역 */
@@ -187,15 +197,16 @@ body {
 /* 카드 공통 */
 .about-card {
   padding: 28px;
-  border: 1px solid #e5e7eb;
+  border: 1px solid gray;
   border-radius: 16px;
-  background-color: #fafafa;
+  
 }
 
 /* 카드 제목 */
 .about-card h2 {
   font-size: 20px;
   margin-bottom: 16px;
+  color: #FFFFFF;
 }
 
 /* 리스트 */
@@ -207,7 +218,7 @@ body {
 .about-card li {
   font-size: 15px;
   line-height: 1.6;
-  color: #333;
+  color: #FFFFFF99;
 }
 
 
@@ -240,7 +251,7 @@ body {
 .skill-card h2 {
   font-size: 25px;
   margin-bottom: 16px;
-  color: #555;
+  color: #FFFFFF;
 }
 
 /* 스킬 리스트 */
@@ -271,7 +282,7 @@ body {
 /* 스킬 텍스트 */
 .skill-name {
   font-size: 18px;
-  color: #333;
+  color: #FFFFFF99;
 }
 
 
@@ -317,7 +328,7 @@ body {
   height: 400px;
   flex-shrink: 0; 
   border-radius: 16px;
-  background-color: white;
+  
 }
 
 /* 이미지 영역 */
@@ -333,7 +344,7 @@ body {
   position: absolute;
   inset: 0;
   background: rgba(2, 6, 23, 0.65);
-  color: #e5e7eb;
+  color: #FFFFFF;
   font-size: 14px;
   display: flex;
   align-items: center;
@@ -351,6 +362,7 @@ body {
   height: 100%;
   object-fit: cover;
   transition: transform 0.4s ease;
+  border-radius: 10px;
 }
 
 /* 이미지 호버 효과 */
@@ -361,13 +373,14 @@ body {
 /* 텍스트 영역 */
 .project-content {
   padding: 16px;
-  color: black;
+  color: #FFFFFF99;
 }
 
 .project-title {
   font-size: 18px;
   font-weight: 600;
   margin-bottom: 8px;
+  color: #FFFFFF;
 }
 
 .project-period{
@@ -411,7 +424,7 @@ body {
 }
 
 .slider-btn:hover {
-  background: #999;
+  background: #FFFFFF99;
 }
 
 
@@ -443,9 +456,9 @@ body {
   display: flex;
   gap: 24px;
   padding: 28px;
-  border: 1px solid #e5e7eb;   /* 기존 디자인 유지 + 그리드용 */
+  border: 1px solid gray;   /* 기존 디자인 유지 + 그리드용 */
   border-radius: 12px;
-  background-color: #fff;
+  
 }
 
 /* ----- 기간 ----- */
@@ -453,14 +466,14 @@ body {
   margin-top: 8px;
   min-width: 140px;
   font-weight: 600;
-  color: #555;
+  color: #00D17D;
 }
 
 /* ----- 내용 ----- */
 .education-content h2 {
   font-size: 20px;
   margin-bottom: 6px;
-  color: #111;
+  color: #FFFFFF;
 }
 
 .education-org {
@@ -477,7 +490,7 @@ body {
 
 .education-detail li {
   font-size: 14px;
-  color: #333;
+  color: #FFFFFF99;
   margin-bottom: 6px;
 }
 
@@ -488,8 +501,8 @@ body {
   border-radius: 999px;
   font-size: 12px;
   font-weight: 600;
-  background-color: #e0f2fe;
-  color: #0284c7;
+  border: 1px solid #00D17D;
+  color: #00D17D;
 }
 
 
@@ -511,7 +524,7 @@ body {
   width: 400px;
   margin-top: 40px;
   padding: 32px;
-  background-color: #ffffff;
+  background-color: #FFFFFF1A;
   border-radius: 16px;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
 }
@@ -522,34 +535,37 @@ body {
   justify-content: space-between;
   align-items: center;
   padding: 14px 0;
-  border-bottom: 1px solid #e5e7eb;
-}
-
-.contact-item:last-child {
-  border-bottom: none;
+  
 }
 
 .contact-label {
   font-weight: 600;
-  color: #555;
+  color: #FFFFFF;
 }
 
 .contact-value {
   font-weight: 500;
-  color: #111;
+  color: #FFFFFF;
 }
 
 /* 링크 */
 .contact-link {
   font-weight: 600;
-  color: #38bdf8;
+  color: #FFFFFF;
   
 }
 
+.contact-message{
+  margin-top: 5rem; 
+  color:#FFFFFF;
+  font-size: 20px;
+  font-weight: 700;
+}
 .right{
   position: relative;
   top: 8rem;
   right: 22rem;
+  color: #FFFFFF;
 }
 
 
