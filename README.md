@@ -13,9 +13,9 @@
 
 ## 🔗 Demo / Links
 
-- Portfolio: `https://minhyeong7.github.io/portfolio/`
-- Resume: `./입사지원서-서민형.pdf`
-- GitHub: `https://github.com/minhyeong7`
+- Portfolio: [포트폴리오 바로가기](https://minhyeong7.github.io)
+- Resume: [이력서 다운로드](./입사지원서-서민형.pdf)
+- GitHub: [GitHub](https://github.com/minhyeong7)
 
 ---
 
