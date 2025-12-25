@@ -13,8 +13,8 @@
 
 ## 🔗 Demo / Links
 
-- Portfolio: [포트폴리오 바로가기](https://minhyeong7.github.io)
-- Resume: [이력서 다운로드](./입사지원서-서민형.pdf)
+- Portfolio: [포트폴리오 바로가기](https://minhyeong7.github.io/portfolio/)
+- Resume: [이력서](./입사지원서-서민형.pdf)
 - GitHub: [GitHub](https://github.com/minhyeong7)
 
 ---
