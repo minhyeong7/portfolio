@@ -4,6 +4,10 @@
   box-sizing: border-box;
 }
 
+html {
+  scrollbar-gutter: stable;
+}
+
 body {
   font-family: "Pretendard", Arial, sans-serif;
   display: flex;
@@ -84,7 +88,7 @@ body {
 
 .section {
   min-height: 100vh;
-  border-bottom: 1px solid gray;
+  
 }
 
 .section:last-of-type {

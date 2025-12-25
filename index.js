@@ -62,20 +62,20 @@ prevBtn.addEventListener('click', () => {
 });
 
 
-// 모달
-const openBtns = document.querySelectorAll(".openModal");
-
-openBtns.forEach((btn) => {
+// 모달 열기
+document.querySelectorAll(".openModal").forEach((btn) => {
   btn.addEventListener("click", () => {
-    const card = btn.closest(".project-card");
-    const modal = card.querySelector(".modal-overlay");
+    const modalId = btn.dataset.modal; // modal-roommind
+    const modal = document.getElementById(modalId);
+
+    if (!modal) return;
 
     modal.classList.add("active");
     document.body.classList.add("modal-open");
   });
 });
 
-// 닫기 버튼 (모달마다 다 적용)
+// 닫기 버튼
 document.querySelectorAll(".modal-close").forEach((closeBtn) => {
   closeBtn.addEventListener("click", () => {
     const modal = closeBtn.closest(".modal-overlay");
@@ -84,7 +84,7 @@ document.querySelectorAll(".modal-close").forEach((closeBtn) => {
   });
 });
 
-// 배경 클릭 시 닫기 (모달마다 다 적용)
+// 배경 클릭 시 닫기
 document.querySelectorAll(".modal-overlay").forEach((overlay) => {
   overlay.addEventListener("click", (e) => {
     if (e.target === overlay) {
