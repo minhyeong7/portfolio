@@ -63,28 +63,35 @@ prevBtn.addEventListener('click', () => {
 
 
 // 모달
-const openBtn = document.getElementById('openModal');
-const modal = document.getElementById('modal');
-const closeBtn = document.getElementById('closeModal');
+const openBtns = document.querySelectorAll(".openModal");
 
-// 열기
-openBtn.addEventListener('click', () => {
-  modal.classList.add('active');
-  document.body.classList.add('modal-open'); // ⭐ 이 줄만 추가
+openBtns.forEach((btn) => {
+  btn.addEventListener("click", () => {
+    const card = btn.closest(".project-card");
+    const modal = card.querySelector(".modal-overlay");
+
+    modal.classList.add("active");
+    document.body.classList.add("modal-open");
+  });
 });
 
-// 닫기 (X 버튼)
-closeBtn.addEventListener('click', () => {
-  modal.classList.remove('active');
-  document.body.classList.remove('modal-open'); // ⭐ 이 줄만 추가
+// 닫기 버튼 (모달마다 다 적용)
+document.querySelectorAll(".modal-close").forEach((closeBtn) => {
+  closeBtn.addEventListener("click", () => {
+    const modal = closeBtn.closest(".modal-overlay");
+    modal.classList.remove("active");
+    document.body.classList.remove("modal-open");
+  });
 });
 
-// 배경 클릭 시 닫기
-modal.addEventListener('click', (e) => {
-  if (e.target === modal) {
-    modal.classList.remove('active');
-    document.body.classList.remove('modal-open'); // ⭐ 이 줄만 추가
-  }
+// 배경 클릭 시 닫기 (모달마다 다 적용)
+document.querySelectorAll(".modal-overlay").forEach((overlay) => {
+  overlay.addEventListener("click", (e) => {
+    if (e.target === overlay) {
+      overlay.classList.remove("active");
+      document.body.classList.remove("modal-open");
+    }
+  });
 });
 
 
