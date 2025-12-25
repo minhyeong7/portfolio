@@ -13,7 +13,7 @@
 
 ## 🔗 Demo / Links
 
-- Portfolio: (배포 링크를 여기에 추가하세요)
+- Portfolio: `https://minhyeong7.github.io/portfolio/`
 - Resume: `./입사지원서-서민형.pdf`
 - GitHub: `https://github.com/minhyeong7`
 
@@ -79,7 +79,4 @@
 
 ---
 
-## 🗂 Project Structure (예시)
-
-> 실제 폴더 구조에 맞게 조정하세요.
 
