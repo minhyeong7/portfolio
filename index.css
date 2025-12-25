@@ -377,11 +377,18 @@ body {
   color: #FFFFFF99;
 }
 
+.project-content p{
+  font-size: 16px;
+  margin-bottom: 5px;
+}
+
+
 .project-title {
-  font-size: 18px;
+  font-size: 24px;
   font-weight: 600;
   margin-bottom: 8px;
   color: #FFFFFF;
+  
 }
 
 .project-period{
@@ -390,11 +397,6 @@ body {
   color: #9ca3af;
 }
 
-.project-desc{
-  font-size: 14px;
-  font-weight: 500;
-  margin-bottom: 5px;
-}
 
 .project-role{
   line-height: 1.4;
@@ -402,6 +404,100 @@ body {
   list-style: none;
   
 }
+
+#openModal{
+  padding: 0.6rem 2rem;
+  font-size: 13px;
+  background-color: #FFFFFF0D;
+  border: none;
+  color: #FFFFFF99;
+  font-weight: 700;
+  border-radius: 12px;
+  margin-top: 5px;
+}
+
+#openModal:hover{
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* 
+/* 모달 배경 */
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.3);
+  display: none;
+  justify-content: center;
+  z-index: 1000;
+  align-items: flex-start;   /* 중앙 X, 위 기준 */
+  padding: 80px 0;           /* 위아래 여백 */
+}
+
+body.modal-open { 
+  overflow: hidden; 
+}
+
+/* 모달 본체 */
+.modal {
+  background: #0F182A;
+  color: #FFFFFF;
+  width: 90%;
+  max-width: 700px;
+  max-height: calc(100vh - 160px); /* ⭐ 핵심 */
+  overflow-y: auto;          /* ⭐ 핵심 */
+  padding: 40px;
+  border-radius: 16px;
+  position: relative;
+  line-height: 1.6;
+}
+
+/* 닫기 버튼 */
+.modal-close {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  border: none;
+  background: none;
+  font-size: 36px;
+  cursor: pointer;
+  color: #FFFFFF99;
+  
+}
+
+/* 활성화 */
+.modal-overlay.active {
+  display: flex;
+}
+
+/* 클릭 가능 표시 */
+.project-content {
+  cursor: pointer;
+} 
+
+.modal h5{
+  color: #FFFFFF99;
+}
+
+#detail-container{
+  display: flex;
+  gap: 2rem;
+  
+}
+
+#modal-boundary{
+  border-bottom: 1px solid gray;
+  margin-bottom: 2rem;
+}
+.text-box{
+  margin-bottom: 2rem;
+}
+
+.text-box ul{
+  padding-left: 2rem;
+  color: #FFFFFFCC;
+}
+
+
 
 
 

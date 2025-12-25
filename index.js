@@ -62,9 +62,34 @@ prevBtn.addEventListener('click', () => {
 });
 
 
+// 모달
+const openBtn = document.getElementById('openModal');
+const modal = document.getElementById('modal');
+const closeBtn = document.getElementById('closeModal');
+
+// 열기
+openBtn.addEventListener('click', () => {
+  modal.classList.add('active');
+  document.body.classList.add('modal-open'); // ⭐ 이 줄만 추가
+});
+
+// 닫기 (X 버튼)
+closeBtn.addEventListener('click', () => {
+  modal.classList.remove('active');
+  document.body.classList.remove('modal-open'); // ⭐ 이 줄만 추가
+});
+
+// 배경 클릭 시 닫기
+modal.addEventListener('click', (e) => {
+  if (e.target === modal) {
+    modal.classList.remove('active');
+    document.body.classList.remove('modal-open'); // ⭐ 이 줄만 추가
+  }
+});
 
 
 
+// 해당섹션에 맞게 사이드바 활성화
 const sections = document.querySelectorAll('section');
 
 const observer = new IntersectionObserver(
