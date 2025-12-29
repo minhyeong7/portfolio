@@ -668,6 +668,7 @@ body.modal-open {
 }
 .right{
   text-align:end;
+  margin-right: 5rem;
   color: #FFFFFF;
 }
 
