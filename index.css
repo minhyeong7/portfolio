@@ -667,9 +667,8 @@ body.modal-open {
   font-weight: 700;
 }
 .right{
-  position: relative;
-  top: 8rem;
-  right: 22rem;
+  text-align:end;
+  margin-right: 10rem;
   color: #FFFFFF;
 }
 
