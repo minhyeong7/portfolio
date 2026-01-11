@@ -384,7 +384,7 @@
             </p>
             <h4>사용 기술:</h4>
             <p style="font-size: 14px;">React · Spring Boot · PostgreSQL · GPT API · Render</p>
-            <button  class="openModal" data-modal="modal-moodymovie">제작 중 (2025.12.28 ~  )</button>
+            <button  class="openModal" data-modal="modal-moviebot">상세보기</button>
           </div>
         </div>
         
@@ -567,35 +567,35 @@
           </div>
 
            <!-- moviebot 모달 -->
-          <div class="modal-overlay" id="modal-roommind">
+          <div class="modal-overlay" id="modal-moviebot">
             <div class="modal">
               <button class="modal-close" id="closeModal">×</button>
           
-              <h2 style="margin-bottom: 2rem;">RoomMind</h2>
+              <h2 style="margin-bottom: 2rem;">Moviebot</h2>
           
               <div>
                 <div class="text-box">
                   <h5>프로젝트 설명</h5>
                   <p class="modal-desc">
-                   Spring Boot 및 React 기반 가구 쇼핑몰 웹서비스
+                   React 및 Spring Boot 기반 영화 추천 챗봇 웹서비스
                   </p>
                 </div>
                 <div class="text-box">
                   <h5>기술 스택</h5>
-                  <p>React · Spring Boot · MySQL · Flask · AWS</p>
+                  <p>React(Vite) · Spring Boot · Tailwindcss · PostgreSQL · Render · Vercel</p>
                 </div>
                 <div class="text-box" id="detail-container">
                   <div>
                     <h5>참여인원</h5>
-                    <p>4명(FE 2명 , BE 2명)</p>
+                    <p>1명</p>
                   </div>
                   <div>
                     <h5>기간</h5>
-                    <p>2025.11 ~ 2025.12 (상시 업데이트)</p>
+                    <p>2026.01</p>
                   </div>
                   <div>
                     <h5>관련 링크</h5>
-                    <a href="https://github.com/minhyeong7/roommind-java">룸마인드 깃허브</a>
+                    <a href="https://github.com/minhyeong7/Movie-Bot">무비봇 깃허브</a>
                   </div>
                 </div>
               </div>
@@ -605,25 +605,10 @@
               <div class="text-box">
                 <h3>주요 기능</h3>
                 <ul>
-                  <li>YOLO 객체 인식 + 유사 이미지 Top3 추천, Gemini 챗봇 추천 연동</li>
-                  <li>카테고리 기반 상품 조회, 상품 상세(이미지/설명) 제공</li>
-                  <li>장바구니, 주문서, 배송지 입력, PortOne 결제 연동</li>
-                  <li>JWT 로그인/회원가입 + 소셜 로그인(구글/네이버/카카오)</li>
-                  <li>관리자 전용 백오피스 개발</li>
-                  <li>리뷰 CRUD, 커뮤니티 게시판 CRUD, 문의(QnA) CRUD + 관리자 답변</li>
-                  <li>상품/카테고리 CRUD, 회원 조회·권한 설정, 주문/배송지 관리</li>
-                  <li>AWS 환경(EC2/RDS) 기반 배포 및 도메인 운영 관리</li>
-                </ul>
-              </div>
-
-              <div class="text-box">
-                <h3>내 역할</h3>
-                <ul>
-                  <li>ERD 설계 및 데이터베이스 구축</li>
-                  <li>JWT 기반 회원가입 / (소셜)로그인 구현</li>
-                  <li>주문 · 결제 · 장바구니 핵심 로직 개발</li>
-                  <li>QnA 게시판 및 리뷰 CRUD 구현</li>
-                  <li>AWS EC2 / RDS 배포 및 도메인 관리</li>
+                  <li>GPT 기반 대화형 영화 추천 챗봇</li>
+                  <li>TMDB 연동으로 영화 포스터·정보 조회</li>
+                  <li>추천된 영화 DB 누적 및 관리</li>
+                  <li>백엔드(Render) 및 프론트(Vercel) 배포 및 관리</li>
                 </ul>
               </div>
 
@@ -631,27 +616,19 @@
               <div class="text-box">
                 <h3>프로젝트 인사이트</h3>
                 <p style="color: #FFFFFFCC;">
-                  AI 기능을 접목한 이커머스 웹 서비스를 처음부터 끝까지 구축하며, 실무에 가까운 백엔드 개발을 경험할 수 있었습니다.
+                  영화 추천 챗봇 프로젝트를 진행하면서 “기능 구현”보다 더 중요한 것이 배포 환경에서 안정적으로 동작하게 만드는 설계와 디버깅이라는 점을 체감했습니다. 로컬에서는 정상인데 배포(Vercel/Render)에서만 문제가
+                  발생하는 상황을 여러 번 겪었고, 그 과정에서 프론트 라우팅/환경 변수/CORS/API 응답 포맷까지 서비스 운영 관점의 문제 해결 경험을 쌓을 수 있었습니다. <br><br>
                   
-                  ERD를 설계하면서 회원, 상품, 주문, 결제 등 여러 테이블이 어떻게 연결되어야 하는지 고민했습니다. 특히 장바구니와 주문의 관계, 결제 상태 관리 등을 설계하며 초기 데이터베이스 구조가 이후 개발 전체에
-                  얼마나 큰 영향을 미치는지 배웠습니다. 테이블 관계를 제대로 설정하지 않으면 나중에 수정하기 매우 어렵다는 것을 직접 경험했습니다. <br><br>
+                  특히 Vercel 배포 후 루트가 아닌 경로에서 새로고침 시 404가 발생했는데, 이는 React Router 기반 SPA 특성상 서버가 해당 경로를 정적 파일로 찾으려다 실패하는 문제였습니다. 이를 해결하며 SPA
+                  라우팅은 “클라이언트 라우팅 + 서버 리라이트 설정”이 함께 있어야 한다는 것을 명확히 이해했습니다(예: vercel.json rewrites로 모든 경로를 index.html로 처리).<br><br>
                   
-                  JWT를 이용한 로그인과 소셜 로그인을 구현하며 토큰 기반 인증이 어떻게 작동하는지 이해하게 되었습니다. Token을 관리하고, 토큰 만료 처리를 하는 과정에서 단순히 기능만 구현하는 것이 아니라 보안을 고려한
-                  설계가 중요하다는 것을 배웠습니다.
-                  <br><br>
+                  백엔드에서는 getTop10RecommendedMovies() 같은 메서드 호출 오류(메서드 후보를 찾을 수 없음)를 겪으면서, 기능 추가 시 Service/Repository/DTO 계층 간 시그니처와 책임이
+                  어긋나면 컴파일 단계에서 바로 무너진다는 것을 배웠습니다. 이후에는 API를 추가할 때 Controller → Service → Repository 흐름을 먼저 확정하고, DTO 변환/트랜잭션 경계까지 함께 정리하는
+                  방식으로 안정성을 높였습니다.<br><br>
                   
-                  주문과 결제 기능을 만들면서 가장 어려웠던 부분은 재고 차감, 결제 검증, 주문 상태 변경이 모두 정확하게 처리되어야 한다는 점이었습니다. 중간에 오류가 발생하면 이전 상태로 되돌려야 하는 등 예외 상황 처리의
-                  중요성을 실감했습니다. 단순히 정상적인 경우만 생각하면 안 되고, 실패하는 경우도 철저히 대비해야 한다는 것을 배웠습니다.<br><br>
-                  QnA 게시판과 리뷰 CRUD를 구현하며 RESTful API 설계 방법을 익혔습니다. 조회, 등록, 수정, 삭제 기능을 만들면서 일관성 있는 API 구조를 만드는 법과 페이징, 검색 기능 등 실제 서비스에
-                  필요한 기능들을 구현하는 경험을 했습니다.
-                  <br><br>
-                  
-                  AWS EC2와 RDS로 실제 서비스를 배포하면서 개발 환경과 실제 운영 환경의 차이를 배웠습니다. 데이터베이스 연결 설정, 환경변수 관리, 도메인 연결 등 로컬에서는 몰랐던 부분들을 직접 해결하며 배포와 운영에
-                  대한 이해도를 높였습니다.
-                  <br><br>
-                  
-                  프로젝트를 진행하며 테스트 코드를 작성하지 못한 점, 예외 처리가 일관되지 않은 점, 비슷한 코드가 반복되는 점 등의 문제를 발견했습니다. 특히 기능을 추가할 때마다 기존 코드를 자주 수정해야 했던 것은 처음
-                  설계할 때 확장 가능성을 충분히 고려하지 못했기 때문이라고 생각합니다. 다음 프로젝트에서는 테스트 코드를 작성하고, 코드를 더 체계적으로 정리해서 유지보수하기 쉬운 구조로 만들고 싶습니다.
+                  마지막으로 GPT 추천 결과를 그대로 보여주는 것이 아니라, “항상 3개 추천”, “JSON 형식 고정” 같은 출력 규칙을 두고도 UI에서 2개만 노출되는 문제를 겪으며, AI 기능은 프롬프트만으로 끝나는 것이
+                  아니라 응답 파싱/검증/렌더링까지 포함한 엔드투엔드 품질 관리가 필요하다는 것을 깨달았습니다. 결과적으로 이 프로젝트는 AI 추천 + 외부 API(TMDB) + 사용자 클릭 기반 DB 누적을 연결하면서, 실제
+                  서비스에 가까운 문제(배포, 라우팅, CORS, 환경 분리, 데이터 검증)를 해결한 경험으로 남았습니다.<br><br>
                 </p>
               </div>
 
