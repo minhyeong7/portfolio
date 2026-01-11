@@ -566,6 +566,98 @@
             </div>
           </div>
 
+           <!-- moviebot 모달 -->
+          <div class="modal-overlay" id="modal-roommind">
+            <div class="modal">
+              <button class="modal-close" id="closeModal">×</button>
+          
+              <h2 style="margin-bottom: 2rem;">RoomMind</h2>
+          
+              <div>
+                <div class="text-box">
+                  <h5>프로젝트 설명</h5>
+                  <p class="modal-desc">
+                   Spring Boot 및 React 기반 가구 쇼핑몰 웹서비스
+                  </p>
+                </div>
+                <div class="text-box">
+                  <h5>기술 스택</h5>
+                  <p>React · Spring Boot · MySQL · Flask · AWS</p>
+                </div>
+                <div class="text-box" id="detail-container">
+                  <div>
+                    <h5>참여인원</h5>
+                    <p>4명(FE 2명 , BE 2명)</p>
+                  </div>
+                  <div>
+                    <h5>기간</h5>
+                    <p>2025.11 ~ 2025.12 (상시 업데이트)</p>
+                  </div>
+                  <div>
+                    <h5>관련 링크</h5>
+                    <a href="https://github.com/minhyeong7/roommind-java">룸마인드 깃허브</a>
+                  </div>
+                </div>
+              </div>
+
+              <div id="modal-boundary"></div>
+              
+              <div class="text-box">
+                <h3>주요 기능</h3>
+                <ul>
+                  <li>YOLO 객체 인식 + 유사 이미지 Top3 추천, Gemini 챗봇 추천 연동</li>
+                  <li>카테고리 기반 상품 조회, 상품 상세(이미지/설명) 제공</li>
+                  <li>장바구니, 주문서, 배송지 입력, PortOne 결제 연동</li>
+                  <li>JWT 로그인/회원가입 + 소셜 로그인(구글/네이버/카카오)</li>
+                  <li>관리자 전용 백오피스 개발</li>
+                  <li>리뷰 CRUD, 커뮤니티 게시판 CRUD, 문의(QnA) CRUD + 관리자 답변</li>
+                  <li>상품/카테고리 CRUD, 회원 조회·권한 설정, 주문/배송지 관리</li>
+                  <li>AWS 환경(EC2/RDS) 기반 배포 및 도메인 운영 관리</li>
+                </ul>
+              </div>
+
+              <div class="text-box">
+                <h3>내 역할</h3>
+                <ul>
+                  <li>ERD 설계 및 데이터베이스 구축</li>
+                  <li>JWT 기반 회원가입 / (소셜)로그인 구현</li>
+                  <li>주문 · 결제 · 장바구니 핵심 로직 개발</li>
+                  <li>QnA 게시판 및 리뷰 CRUD 구현</li>
+                  <li>AWS EC2 / RDS 배포 및 도메인 관리</li>
+                </ul>
+              </div>
+
+
+              <div class="text-box">
+                <h3>프로젝트 인사이트</h3>
+                <p style="color: #FFFFFFCC;">
+                  AI 기능을 접목한 이커머스 웹 서비스를 처음부터 끝까지 구축하며, 실무에 가까운 백엔드 개발을 경험할 수 있었습니다.
+                  
+                  ERD를 설계하면서 회원, 상품, 주문, 결제 등 여러 테이블이 어떻게 연결되어야 하는지 고민했습니다. 특히 장바구니와 주문의 관계, 결제 상태 관리 등을 설계하며 초기 데이터베이스 구조가 이후 개발 전체에
+                  얼마나 큰 영향을 미치는지 배웠습니다. 테이블 관계를 제대로 설정하지 않으면 나중에 수정하기 매우 어렵다는 것을 직접 경험했습니다. <br><br>
+                  
+                  JWT를 이용한 로그인과 소셜 로그인을 구현하며 토큰 기반 인증이 어떻게 작동하는지 이해하게 되었습니다. Token을 관리하고, 토큰 만료 처리를 하는 과정에서 단순히 기능만 구현하는 것이 아니라 보안을 고려한
+                  설계가 중요하다는 것을 배웠습니다.
+                  <br><br>
+                  
+                  주문과 결제 기능을 만들면서 가장 어려웠던 부분은 재고 차감, 결제 검증, 주문 상태 변경이 모두 정확하게 처리되어야 한다는 점이었습니다. 중간에 오류가 발생하면 이전 상태로 되돌려야 하는 등 예외 상황 처리의
+                  중요성을 실감했습니다. 단순히 정상적인 경우만 생각하면 안 되고, 실패하는 경우도 철저히 대비해야 한다는 것을 배웠습니다.<br><br>
+                  QnA 게시판과 리뷰 CRUD를 구현하며 RESTful API 설계 방법을 익혔습니다. 조회, 등록, 수정, 삭제 기능을 만들면서 일관성 있는 API 구조를 만드는 법과 페이징, 검색 기능 등 실제 서비스에
+                  필요한 기능들을 구현하는 경험을 했습니다.
+                  <br><br>
+                  
+                  AWS EC2와 RDS로 실제 서비스를 배포하면서 개발 환경과 실제 운영 환경의 차이를 배웠습니다. 데이터베이스 연결 설정, 환경변수 관리, 도메인 연결 등 로컬에서는 몰랐던 부분들을 직접 해결하며 배포와 운영에
+                  대한 이해도를 높였습니다.
+                  <br><br>
+                  
+                  프로젝트를 진행하며 테스트 코드를 작성하지 못한 점, 예외 처리가 일관되지 않은 점, 비슷한 코드가 반복되는 점 등의 문제를 발견했습니다. 특히 기능을 추가할 때마다 기존 코드를 자주 수정해야 했던 것은 처음
+                  설계할 때 확장 가능성을 충분히 고려하지 못했기 때문이라고 생각합니다. 다음 프로젝트에서는 테스트 코드를 작성하고, 코드를 더 체계적으로 정리해서 유지보수하기 쉬운 구조로 만들고 싶습니다.
+                </p>
+              </div>
+
+            </div>
+          </div>
+
           <!-- myboard 모달 -->
           <div class="modal-overlay" id="modal-myboard">
             <div class="modal">
